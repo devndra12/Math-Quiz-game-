@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Maths Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="start-game">
+            <h1> Maths Quiz game.</h1>
+            <p>Press the button below to start the game</p>
+            <a id="start-btn" onclick="restart()">LET'S PLAY</a>
+
+    
+            <body>
+                <h1> Math quiz game</h1>
+                <label for="username"></label>
+                <input type="text" id="username" placeholder="Enter your name" />
+                <button onclick="startGame()">Start Game</button>
+                <br><br>
+                <div class="timerContainer">
+                    <h2 id="timerCounter">00.00</h2>
+                </div>
+                <div class="quizContainer" style="text-align: center; width: 100%; background-color: rgb(37, 37, 37);">
+                    <h1 id="exression"></h1>
+                    <h1>
+                        <input id="answer" onkeydown="onKeyDown(event)" style="font-size: 3rem; text-align: center; width: 100%;" />
+                    </h1>
+                    <button id="checkAns" onClick="checkAnswer()">Check Answer</button>
+                </div>
+        </div>
+        <div id="in-game">
+            <div class="top-section">
+                <h1>Maths Game</h1>
+                <div class="game-data">
+                    <p>Question :
+                        <span id="Qno">0</span>/30
+                    </p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+                <div id="timer">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="question-card">
+                <h1 id="question">This is question</h1>
+            </div>
+            <h3>Choose correct one: </h3>
+            <div class="answer-card">
+                <button class="ansOpt">Option A</button>
+                <button class="ansOpt">Option B</button>
+                <button class="ansOpt">Option c</button>
+                <button class="ansOpt">Option d</button>
+            </div>
+        </div>
+        <div id="end-game">
+            <h1>&#128515</h1>
+            <h1>Your total score was : <span id="final-score">0</span> / 1000</h1>
+            <p id="message"></p>
+            <a id="restart-btn" onclick="restart()">PLAY AGAIN</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
